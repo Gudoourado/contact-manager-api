@@ -15,11 +15,11 @@ API REST para gerenciamento de contatos pessoais desenvolvida com **Java 17** e 
 
 ```bash
 # Clonar o repositório
-git clone https://github.com/seu-usuario/contact-manager-api.git
-cd contact-manager-api
+git clone https://github.com/Gudoourado/contact-manager-api.git
+cd contact-manager-api/contact-manager-api
 
 # Executar com Maven
-./mvnw spring-boot:run
+mvn spring-boot:run
 
 # A API estará disponível em http://localhost:8080
 # Console H2: http://localhost:8080/h2-console
