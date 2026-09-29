@@ -7,23 +7,39 @@ API REST para gerenciamento de contatos pessoais desenvolvida com **Java 17** e 
 - Java 17
 - Spring Boot 3.2.4
 - Spring Data JPA / Hibernate
-- PostgreSQL / H2 (desenvolvimento)
+- PostgreSQL (H2 em memória no perfil `dev`)
 - Bean Validation
 - Maven
 
 ## Como Executar
 
+Pré-requisitos: Java 17 ou mais recente e Maven.
+
 ```bash
-# Clonar o repositório
 git clone https://github.com/Gudoourado/contact-manager-api.git
 cd contact-manager-api/contact-manager-api
-
-# Executar com Maven
-mvn spring-boot:run
-
-# A API estará disponível em http://localhost:8080
-# Console H2: http://localhost:8080/h2-console
 ```
+
+### Rápido, sem instalar banco (perfil `dev`)
+
+```bash
+mvn spring-boot:run -Dspring-boot.run.profiles=dev
+```
+
+Usa um banco H2 em memória: sobe em segundos e os dados somem quando a aplicação para.
+
+- API: http://localhost:8080
+- Console do H2: http://localhost:8080/h2-console (JDBC URL `jdbc:h2:mem:contactdb`, usuário `sa`, sem senha)
+
+### Com PostgreSQL
+
+Crie o banco `contactdb` e rode:
+
+```bash
+mvn spring-boot:run
+```
+
+Usuário e senha vêm das variáveis `DB_USERNAME` e `DB_PASSWORD` (padrão: `postgres` / `postgres`).
 
 ## Endpoints
 
