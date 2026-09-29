@@ -1,5 +1,7 @@
 # Contact Manager API
 
+[![CI](https://github.com/Gudoourado/contact-manager-api/actions/workflows/ci.yml/badge.svg)](https://github.com/Gudoourado/contact-manager-api/actions/workflows/ci.yml)
+
 API REST para gerenciamento de contatos pessoais desenvolvida com **Java 17** e **Spring Boot 3.2**.
 
 ## Tecnologias
